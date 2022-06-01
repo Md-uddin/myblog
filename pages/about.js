@@ -8,7 +8,7 @@ export default function About() {
         <h1>About Page</h1>
         <p className={styles.description}>
           <Link href="/">
-            <a>&larr; Go Back</a>
+            <a className="back-btn">&larr; Go Back</a>
           </Link>
         </p>
       </main>

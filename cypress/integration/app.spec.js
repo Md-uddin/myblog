@@ -18,3 +18,8 @@ describe('Navigation', () => {
     cy.get('h1').contains('About Page')
   })
 })
+
+it("should re navigate to home page", () => {
+  // cy.findByRole("link", { name: /← go back/i });
+  cy.get('a[href*="/"]').click();
+});
