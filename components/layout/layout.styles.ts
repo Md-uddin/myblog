@@ -11,8 +11,10 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'column',
     marginLeft: 'auto',
     marginRight: 'auto',
+    
     borderRadius: theme.radius.sm,
 
     // Dynamic media queries, define breakpoints in theme, use anywhere
@@ -25,13 +27,9 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
   },
 
   child: {
-    // assign ref to element
-    ref: getRef('child'),
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
-    padding: theme.spacing.md,
-    borderRadius: theme.radius.sm,
-    boxShadow: theme.shadows.md,
-    // color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-    color:theme.colorScheme === 'dark' ?theme.colors.blue[3] : theme.colors.green[2]
+    width: '100%',
+    maxWidth: 1400,
+    margin: '0 auto',
+    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : 'white',
   },
 }));
