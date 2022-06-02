@@ -8,10 +8,15 @@ export default function About() {
         <h1>About Page</h1>
         <p className={styles.description}>
           <Link href="/">
-            <a className="back-btn">&larr; Go Back</a>
+            <a className="back-btn">
+              &larr; Go to homepage Back and restart to see wheather the hot
+              reload is working
+            </a>
           </Link>
         </p>
       </main>
     </div>
-  )
+  );
 }
+// docker run -e CHOKIDAR_USEPOLLING=true 
+// -v ${pwd}\pages:/app/pages -d -p 3000:3000 --name react-app base-image
