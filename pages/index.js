@@ -14,7 +14,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-      <Button>Hello world!</Button>
+        <Button>Hello world!</Button>
+        this is home
       </main>
 
     
