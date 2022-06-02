@@ -17,13 +17,7 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     
     borderRadius: theme.radius.sm,
 
-    // Dynamic media queries, define breakpoints in theme, use anywhere
-    [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
-      // Type safe child reference in nested selectors via ref
-      [`& .${getRef('child')}`]: {
-        fontSize: theme.fontSizes.xs,
-      },
-    },
+  
   },
 
   child: {
@@ -31,5 +25,19 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     maxWidth: 1400,
     margin: '0 auto',
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : 'white',
+    display: 'flex',
+    flexDirection: 'row',
+
   },
+  sidebar: {
+    maxWidth: '300px',
+    boxSizing: 'border-box',
+    padding:'5px 1rem',
+    [`@media (max-width: ${theme.breakpoints.md}px)`]: {
+    display:'none'
+    },
+  },
+  main: {
+    width:'100%'
+  }
 }));

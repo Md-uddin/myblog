@@ -1,8 +1,10 @@
 import { ReactNode,FC,useState } from "react";
-import { MantineProvider, ColorSchemeProvider, ColorScheme, Navbar } from '@mantine/core';
+import { MantineProvider, ColorSchemeProvider, ColorScheme, Navbar, Container } from '@mantine/core';
 import {useStyles} from './layout.styles'
 import { HeaderResponsive } from "../Header/Header";
 import { FooterSimple } from "../footer/Footer";
+import { EmailBanner } from "../footer/NewsTeller";
+import { TableOfContentsFloating } from "../SideNav/Sidebar";
 
 type Props = {
   name: string;
@@ -54,13 +56,27 @@ const Layout:FC<Props> = ({children,themeColor,setThemeColor}) => {
     >
         <div className={classes.wrapper}>
           <HeaderResponsive links={links}/>
-        <div className={classes.child}>
-          
+          <div className={classes.child}>
+            <aside className={classes.sidebar}>
+              <TableOfContentsFloating links={
+                [
+                  { link: '#content', label: 'content',order:1 },
+                  { link: '#about', label: 'about',order:2 },
+                  { link: '#privacy-policy', label: 'privacy-policy',order:1 },
+                  { link: '#disclaimer', label: 'disclaimer', order: 2 },
+                  { link: '#', label: 'home',order:1 },
+                ]
+              } />
+            </aside>
+            <Container className={classes.main}>
+              
           {children}
+          </Container>
           
           </div>
-          <FooterSimple links={links}/>
       </div>
+          <EmailBanner />
+          <FooterSimple links={links}/>
       </MantineProvider>
       </ColorSchemeProvider>
   )
