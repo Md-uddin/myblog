@@ -1,5 +1,6 @@
 import React from 'react';
-import { createStyles, Text, Title, TextInput, Button, Image } from '@mantine/core';
+import { createStyles, Text, Title, TextInput, Button, } from '@mantine/core';
+import Image from 'next/image'
 // import image from 'https://ui.mantine.dev/_next/static/media/image.969ed1dc.svg';
 
 const useStyles = createStyles((theme) => ({
@@ -89,7 +90,7 @@ export function EmailBanner() {
           <Button className={classes.control}>Subscribe</Button>
         </div>
       </div>
-      <Image src="https://ui.mantine.dev/_next/static/media/image.969ed1dc.svg" className={classes.image} />
+      <Image src="/images/email-banner.svg" className={classes.image}  alt="add Email for newsteller" layout="intrinsic" width={400} height={300} />
     </div>
   );
 }

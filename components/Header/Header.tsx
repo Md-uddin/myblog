@@ -74,11 +74,12 @@ const useStyles = createStyles((theme) => ({
 
   linkActive: {
     '&, &:hover': {
-      backgroundColor:
-        theme.colorScheme === 'dark'
-          ? theme.fn.rgba(theme.colors[theme.primaryColor][9], 0.25)
-          : theme.colors[theme.primaryColor][0],
-      color: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 3 : 7],
+      // backgroundColor:
+      //   theme.colorScheme === 'dark'
+      //     ? theme.fn.rgba(theme.colors[theme.primaryColor][9], 0.25)
+      //     : theme.colors[theme.primaryColor][0],
+      // color: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 3 : 7],
+      backgroundColor: theme.colors.grape[2]
     },
   },
 }));

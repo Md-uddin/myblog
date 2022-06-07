@@ -1,7 +1,7 @@
 import React from 'react';
-import { createStyles, Image, Container, Title, Text, Button, SimpleGrid } from '@mantine/core';
+import { createStyles,  Container, Title, Text, Button, SimpleGrid } from '@mantine/core';
 import Link from 'next/link';
-
+import Image from 'next/image';
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -31,13 +31,13 @@ const useStyles = createStyles((theme) => ({
 
   mobileImage: {
     [theme.fn.largerThan('sm')]: {
-      display: 'none',
+      display: 'none ',
     },
   },
 
   desktopImage: {
     [theme.fn.smallerThan('sm')]: {
-      display: 'none',
+      display: 'none ',
     },
   },
 }));
@@ -48,7 +48,10 @@ export default function NotFoundImage() {
   return (
     <Container className={classes.root}>
       <SimpleGrid spacing={80} cols={2} breakpoints={[{ maxWidth: 'sm', cols: 1, spacing: 40 }]}>
-      <Image src="https://ui.mantine.dev/_next/static/media/image.11cd6c19.svg" className={classes.mobileImage} />
+        <div className={classes.mobileImage} >
+
+      <Image src="/images/404.svg"  layout="intrinsic" width={250} height={200} alt="you are not wrong url, click to return to home" />
+        </div>
         <div>
           <Title className={classes.title}>Something is not right...</Title>
           <Text color="dimmed" size="lg">
@@ -62,7 +65,10 @@ export default function NotFoundImage() {
           </Button>
           </Link>
         </div>
-        <Image src="https://ui.mantine.dev/_next/static/media/image.11cd6c19.svg" className={classes.desktopImage} />
+        <div className={classes.desktopImage} >
+
+        <Image src="/images/404.svg"  layout="intrinsic" width={450} height={300} alt="you are not wrong url, click to return to home" />
+        </div>
       </SimpleGrid>
     </Container>
   );

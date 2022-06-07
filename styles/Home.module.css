@@ -3,7 +3,20 @@
   padding: 1rem 0.5rem;
   display: flex;
 
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
 }
-
+.container p{
+  font-size: 1.4em;
+  font-weight: 400;
+  padding: 1rem 0;
+  padding-top: 10px;
+  
+}
+.container article{
+  width: 100%;
+}
+.container .imgContainer{
+  width: 100%;
+  
+}

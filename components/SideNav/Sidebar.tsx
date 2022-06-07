@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState,useMemo } from 'react';
 import { createStyles, Box, Text, Group } from '@mantine/core';
 import { ListSearch } from 'tabler-icons-react';
+import {useRouter} from 'next/router'
 
 const LINK_HEIGHT = 38;
 const INDICATOR_SIZE = 10;
@@ -35,6 +36,7 @@ const useStyles = createStyles((theme) => ({
 
   links: {
     position: 'relative',
+    textTransform: 'uppercase',
   },
 
   indicator: {
@@ -57,7 +59,18 @@ interface TableOfContentsFloatingProps {
 export function TableOfContentsFloating({ links }: TableOfContentsFloatingProps) {
   const { classes, cx } = useStyles();
   const [active, setActive] = useState(2);
-
+  const router = useRouter();
+  let route = router.asPath.slice(1);
+  console.log(route)
+  useMemo(() => {
+    links.map((item, index) => {
+      if (item.link === route) {
+        console.log('one found',item)
+        setActive(index)
+      }
+    })
+  }, [router])
+  
   const items = links.map((item, index) => (
     <Box<'a'>
       component="a"
@@ -65,6 +78,7 @@ export function TableOfContentsFloating({ links }: TableOfContentsFloatingProps)
       onClick={(event) => {
         event.preventDefault();
         setActive(index);
+        router.push(item.link)
       }}
       key={item.label}
       className={cx(classes.link, { [classes.linkActive]: active === index })}
