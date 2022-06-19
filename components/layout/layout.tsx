@@ -16,8 +16,8 @@ type Props = {
 const Layout:FC<Props> = ({children,themeColor,setThemeColor}) => {
   const {classes} = useStyles();
   const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
-  const props = useContext(UseContext);
-  console.log(props);
+  const {sidebarLinks,setSidebarLinks} = useContext(UseContext);
+
   const toggleColorScheme = (value?: ColorScheme) =>
     setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
   let links = [
@@ -64,13 +64,7 @@ const Layout:FC<Props> = ({children,themeColor,setThemeColor}) => {
           <div className={classes.child}>
             <aside className={classes.sidebar}>
               <TableOfContentsFloating links={
-                [
-                  { link: '#content', label: 'content',order:1 },
-                  { link: '#about', label: 'about',order:2 },
-                  { link: '#privacy-policy', label: 'privacy-policy',order:1 },
-                  { link: '#third-title', label: 'third-title', order: 2 },
-                  { link: '#', label: 'home',order:1 },
-                ]
+                sidebarLinks
               } />
             </aside>
             <Container className={classes.main} >
