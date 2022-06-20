@@ -30,7 +30,7 @@ export default function Important_html_tags() {
           name="description"
           content="Here i will share you the 5 most important/usefull html tags that you can start using in your projects.This html tags are not mostly used by developer but it can some time really useful and time saving. "
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <section>
         <Title order={1}>
@@ -47,7 +47,7 @@ export default function Important_html_tags() {
         />
         <hr className={styles.hr} />
 
-        <Title order={3}>Introduction</Title>
+        <Title order={2}>Introduction</Title>
         <p>
           As a web developer, it is nowadays really difficult to master one
           language to its full potential as we have to be familiar with every
@@ -313,7 +313,8 @@ export default function Important_html_tags() {
             // onCopy={()=>{console.log('copied')}}
           />
         </article>
-        <Title order={3}>Conclusion:</Title>
+        <hr className={styles.hr} />
+        <Title order={2}>Conclusion:</Title>
         <p>
           Html has many tags which are not well known by every developer and it
           is updating itself constantly. And every new update in technologies is
