@@ -22,14 +22,19 @@ export default function Important_html_tags() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <meta name="description" content="best html useful tags" />
+        <title>
+          5 Important/usefull html tags you must start using them in your
+          projects.
+        </title>
+        <meta
+          name="description"
+          content="Here i will share you the 5 most important/usefull html tags that you can start using in your projects.This html tags are not mostly used by developer but it can some time really useful and time saving. "
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section>
         <Title order={1}>
-          {/* Important html tags you are not using in projects. */}5
-          Important/usefull html tags you must start using them in your
+          5 Important/usefull html tags you must start using them in your
           projects.
         </Title>
         <hr className={styles.hr} />
@@ -38,6 +43,7 @@ export default function Important_html_tags() {
           width={600}
           height={400}
           layout="responsive"
+          alt="important html tags to improve productivity"
         />
         <hr className={styles.hr} />
 
@@ -307,6 +313,15 @@ export default function Important_html_tags() {
             // onCopy={()=>{console.log('copied')}}
           />
         </article>
+        <Title order={3}>Conclusion:</Title>
+        <p>
+          Html has many tags which are not well known by every developer and it
+          is updating itself constantly. And every new update in technologies is
+          making life easier, So this can be the best deal to keep yourself
+          updated and avoid the tags which are No more supported by browsers. Do
+          not forget to share with your friend if it was helpful for you. Thanks
+          :)
+        </p>
       </section>
     </div>
   );
