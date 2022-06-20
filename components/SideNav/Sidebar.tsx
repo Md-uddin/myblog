@@ -59,9 +59,9 @@ const useStyles = createStyles((theme) => ({
     background: theme.colors.grape[6],
   },
 }));
-
+type linkType = { label: string; link: string; order: number };
 interface TableOfContentsFloatingProps {
-  links?: [{ label: string; link: string; order: number }] | null;
+  links?: linkType[] | null;
 }
 type item = {
   link: string;
@@ -72,14 +72,14 @@ export function TableOfContentsFloating({
   links,
 }: TableOfContentsFloatingProps) {
   const { classes, cx } = useStyles();
-  const [active, setActive] = useState(2);
+  const [active, setActive] = useState(1);
   const router = useRouter();
   let route = router.asPath.slice(1);
   console.log(route);
   useMemo(() => {
     links?.map((item: item, index: number) => {
       if (item.link === route) {
-        console.log("one found", item);
+        // console.log("one found", item);
         setActive(index);
       }
     });
@@ -106,7 +106,7 @@ export function TableOfContentsFloating({
     <div>
       <Group mb="md">
         <ListSearch size={18} />
-        <Text>Table of contents</Text>
+        <Text>List of tags</Text>
       </Group>
       <div className={classes.links}>
         <div

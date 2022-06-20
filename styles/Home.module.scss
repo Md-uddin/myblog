@@ -1,0 +1,55 @@
+.container {
+  /* min-height: 100vh; */
+  padding: 1rem 0.5rem;
+  display: flex;
+
+
+  /* height: 100vh; */
+  width: 100%;
+}
+.container p {
+  font-size: 1.3em;
+  font-weight: 400;
+  padding: 1rem 0;
+  padding-top: 10px;
+}
+.container article {
+  width: 100%;
+}
+.container .imgContainer {
+  width: 100%;
+}
+
+.hr {
+  border: none;
+  background: brown;
+  height: 2px;
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 4px;
+}
+.codeBlock {
+  background: rgb(240, 240, 226);
+  color: rgb(8, 36, 8);
+  margin: 0 0.4rem;
+  font-size: 1rem;
+}
+.attributeTitle {
+  color: brown;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.container {
+  .attributes {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    span {
+      font-weight: bold;
+      margin-right: 0.6rem;
+    }
+  }
+  .codeHeader {
+    margin-top: 2rem;
+    margin-bottom: 0.6rem;
+  }
+}

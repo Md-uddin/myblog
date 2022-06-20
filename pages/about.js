@@ -1,5 +1,5 @@
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
+import styles from "../styles/Home.module.scss";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -18,5 +18,5 @@ export default function About() {
     </div>
   );
 }
-// docker run -e CHOKIDAR_USEPOLLING=true 
+// docker run -e CHOKIDAR_USEPOLLING=true
 // -v ${pwd}\pages:/app/pages -d -p 3000:3000 --name react-app base-image
