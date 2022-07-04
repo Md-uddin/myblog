@@ -30,6 +30,10 @@ export default function Important_html_tags() {
           name="description"
           content="Here i will share you the 5 most important/usefull html tags that you can start using in your projects.This html tags are not mostly used by developer but it can some time really useful and time saving. "
         />
+        <meta
+          name="google-site-verification"
+          content="TRugglbEPYtaOGoRq49KJoH85POWBB0_SqI-jUGNQig"
+        />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <section>
