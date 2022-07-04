@@ -44,6 +44,8 @@ export default function Important_html_tags() {
           height={400}
           layout="responsive"
           alt="important html tags to improve productivity"
+          placeholder="blur"
+          blurDataURL="/images/landing.jpg"
         />
         <hr className={styles.hr} />
 
